@@ -1,0 +1,195 @@
+/* ------------ VARIABLES ------------*/
+:root {
+  /* COLORS*/
+  --black-blue: 219 29% 14%;
+  --dark-gray-blue: 217 19% 35%;
+  --light-gray: 0 0% 81%;
+  --light-gray-blue: 210 46% 95%;
+  --purple: 263 55% 52%;
+  --white: 0 0% 100%;
+
+  /* FONTS */
+  --ff-barlow-c: "Barlow Semi Condensed", sans-serif;
+  --fs-200: 1rem;
+}
+
+/*------------ RESET CSS ------------*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+/*------------ GENERAL CLASSES ------------*/
+/* BACKGROUND COLORS */
+.bg-purple {
+  background-color: hsl(var(--purple));
+}
+
+.bg-gray-blue {
+  background-color: hsl(var(--dark-gray-blue));
+}
+
+.bg-black-blue {
+  background-color: hsl(var(--black-blue));
+}
+
+.bg-white {
+  background-color: hsl(var(--white));
+}
+
+.bg-light-gray {
+  background-color: hsl(var(--light-gray));
+}
+/* COLORS */
+.text-white {
+  color: hsl(var(--white));
+}
+
+.text-light-gray {
+  color: hsl(var(--light-gray));
+}
+
+.text-dark-gray {
+  color: hsl(var(--dark-gray-blue));
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
+/* FONTS */
+.ff-barlow-c {
+  font-family: var(--ff-barlow-c);
+}
+
+.fs-200 {
+  font-size: var(--fs-200);
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+/* COMPONENTS */
+body {
+  height: 100vh;
+}
+
+.attribution {
+  padding-bottom: 2rem;
+}
+
+.block {
+  display: block;
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 90rem;
+  padding: 2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.flex-center {
+  align-items: center;
+}
+
+.testimonials {
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.card {
+  border-radius: 0.625rem;
+  background-repeat: no-repeat;
+  background-position: top right 1.25rem;
+  padding: 2rem;
+}
+
+.card:nth-of-type(1) {
+  background-image: url(images/bg-pattern-quotation.svg);
+}
+
+.card__header {
+  margin-bottom: 1rem;
+}
+
+.card__header span:nth-of-type(1) {
+  margin-bottom: 0.2rem;
+}
+
+.card__header img {
+  border-radius: 50%;
+  width: 2.5rem;
+  border: 2px solid hsl(var(--light-gray));
+}
+
+.card__content h2 {
+  margin-bottom: 1rem;
+}
+/*------------ MEDIA QUERIES ------------*/
+@media (min-width: 68.75rem) {
+  .testimonials {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .testimonials .card:nth-of-type(1) {
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+  
+}
+
+@media (min-width: 75rem) {
+  .testimonials {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .testimonials .card:nth-of-type(1) {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  .testimonials .card:nth-of-type(2) {
+    grid-column: 3;
+  }
+
+  .testimonials .card:nth-of-type(3) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .testimonials .card:nth-of-type(4) {
+    grid-column: 2 / 4;
+    grid-row: 2;
+  }
+
+  .testimonials .card:nth-of-type(5) {
+    grid-column: 4;
+    grid-row: 1 / 3;
+  }
+}
